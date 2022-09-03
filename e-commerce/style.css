@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.logo img {
+    width: 100px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #e3e6f3;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 2px;
+    transition: 0.5s;
+    content: '';
+    width: 100%;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: green;
+}
+
+.navbar a.active::after,
+.navbar li a:hover::after {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: green;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+/* hero  */
+
+#hero {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    width: 86.5vw;
+    height: 90vh;
+    background-position: top 25% right 0%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h1 span {
+    color: green;
+}
+
+h1 {
+    margin-top: 0%;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 100;
+    margin-top: 0%;
+    margin-bottom: 2%;
+}
+
+
+/* CSS */
+
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #baccf8;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+#feature {
+    padding: 80px 20px;
+}
+
+#feature .feb img {
+    width: 100%;
+}
+
+#feature .feb {
+    width: 190px;
+    text-align: center;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    border: 1px solid #cce7d0;
+    padding: 25px 15px;
+    margin: 15px 0;
+}
+
+#feature .feb:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .feb h6 {
+    display: inline-block;
+    border: 1px solid pink;
+    border-radius: 4px;
+    padding: 9px 8px 6px 8px;
+    color: black;
+    font-size: 22px;
+    background: pink;
+    line-height: 1;
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#feature .feb:nth-child(2) h6 {
+    background-color: lightblue;
+}
+
+#feature .feb:nth-child(3) h6 {
+    background-color: lightcyan;
+}
+
+#feature .feb:nth-child(4) h6 {
+    background-color: lightseagreen;
+}
+
+#feature .feb:nth-child(5) h6 {
+    background-color: lightgray;
+}
+
+
+/* summer collection */
+
+#product {
+    text-align: center;
+}
+
+#product .pro {
+    width: 30%;
+    min-width: 200px;
+    border: 1px solid #cce7d0;
+    padding: 10px 33px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+}
+
+#product .pro img {
+    width: 100%;
+}
+
+.pro-container {
+    display: flex;
+}
